@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tp3-facturacion-prestadores"
+version = "1.0.0"
+description = "Procesador de facturación de prestadores médicos del Grupo 2"
+requires-python = ">=3.11"
+dependencies = ["openpyxl==3.1.5", "et-xmlfile==2.0.0"]
+
+[project.scripts]
+procesar-facturacion = "procesador:main"
+
+[tool.setuptools]
+py-modules = ["prestadores", "validaciones", "procesador"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
