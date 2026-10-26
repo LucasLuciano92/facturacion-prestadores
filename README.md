@@ -132,3 +132,17 @@ datos/                  Muestras académicas de los tres formatos y afiliados
 docs/                   Conflicto, pipeline e incidente
 .github/workflows/      Integración continua y verificación del paquete
 ```
+
+## Etapas 5 y 6
+
+El refactor y las correcciones del gestor heredado, las pruebas de
+caracterización y la planificación del MVP están en
+[docs/etapas5y6.md](docs/etapas5y6.md).
+
+- `liquidacion_refactor.py`: extracción que conserva las reglas del legado.
+- `liquidacion.py`: correcciones explícitas, validaciones compartidas y cierre por lote.
+- `tests/test_liquidacion.py`: caracterización y regresiones del gestor.
+- `medir_complejidad.py`: medición con la regla indicada por el profesor.
+
+Estos módulos se prueban con dobles de base, correo y PDF. La CLI original
+no conecta automáticamente el módulo de topes a una liquidación real.
