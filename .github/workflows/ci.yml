@@ -24,7 +24,7 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -m pip install -r requirements.txt ruff==0.14.1
       - name: Comprobar sintaxis
-        run: python -m compileall -q procesador.py prestadores.py validaciones.py tests
+        run: python -m compileall -q procesador.py prestadores.py validaciones.py liquidacion.py liquidacion_refactor.py medir_complejidad.py tests
       - name: Comprobar estilo y errores estáticos
         run: ruff check .
       - name: Ejecutar pruebas unitarias integración y regresión
